@@ -1,0 +1,110 @@
+/* GEOG 464 – Lab 8 styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background: #f3f4f6;
+}
+
+.site-header {
+  padding: 0.75rem 1.25rem;
+  background: #1f2937;
+  color: #f9fafb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.site-header p {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 72px);
+  max-height: calc(100vh - 72px);
+}
+
+#map-panel {
+  flex: 2;
+  min-width: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar {
+  flex: 1;
+  max-width: 380px;
+  min-width: 260px;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+#sidebar h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+#climate-data p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Leaflet legend */
+.info.legend {
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #111827;
+}
+
+.info.legend b {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.info.legend i {
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin-right: 6px;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+
+  #map-panel {
+    height: 55vh;
+  }
+
+  #sidebar {
+    max-width: 100%;
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+  }
+}
